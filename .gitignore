@@ -1,0 +1,28 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.staging
+.env.backup
+
+# Other environment files
+*.env
+.env.*
+
+# Keep example/template environment files
+!.env.example
+!.env.template
+
+# IDE environment files
+.idea/
+.vscode/
+*.code-workspace
+
+# Environment backup files
+.env.save
+.env.bak
+.env.backup
+.env.old
