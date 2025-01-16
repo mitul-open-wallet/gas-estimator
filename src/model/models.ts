@@ -18,12 +18,12 @@ export enum GasUnits {
   }
   
   export enum TransactionType {
-    nativeTransfer = 'Native Transfer',
-    erc20Transfer = 'Token Transfer', 
-    swap = 'Token Swap',
-    contractDeploy =  'Contract Deployment',
-    nftMint = 'NFT Minting',
-    approve = 'Token Approval'
+    nativeTransfer = 'NativeTransfer',
+    erc20Transfer = 'TokenTransfer', 
+    swap = 'TokenSwap',
+    contractDeploy =  'ContractDeployment',
+    nftMint = 'NFTMinting',
+    approve = 'TokenApproval'
   }
 
   export interface NativeAssetPrice {
