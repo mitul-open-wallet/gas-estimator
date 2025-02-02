@@ -116,9 +116,6 @@ export class AssetPrice {
         this.clearOldPromises()
         if (this.cache === undefined) {
             console.log("No cache")
-            for (const [item, value] of this.promises.entries()) {
-               this.promises.delete(item);
-            }
             const prices = await this.fetchAllPrices()
             this.cache = {
                 cachedAt: new Date(),
