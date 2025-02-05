@@ -5,7 +5,8 @@ export enum EVMNetwork {
     arbitrum = 'arbitrum',
     linea =  'linea',
     polygon = 'polygon',
-    cronos = 'cronos'
+    cronos = 'cronos',
+    binanceSmartChain = "bsc"
 }
 
 export enum GasUnits {
@@ -111,6 +112,8 @@ export function mapEVMNetworkToChainId(network: EVMNetwork): string | undefined 
             return "42161"
         case EVMNetwork.cronos:
             return "25"
+        case EVMNetwork.binanceSmartChain:
+            return "56"
         default:
             return undefined
         
