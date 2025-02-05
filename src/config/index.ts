@@ -18,7 +18,8 @@ function getAppConfig(): AppConfig {
             port: process.env.PORT || "3000",
             wethContractAddress: process.env.WETH_CONTRACT_ADDRESS || "",
             wcroContractAddress: process.env.WCRO_CONTRACT_ADDRESS || "",
-            wpolContractAddress: process.env.WPOL_CONTRACT_ADDRESS || ""
+            wpolContractAddress: process.env.WPOL_CONTRACT_ADDRESS || "",
+            wbnbContractAdrress: process.env.WBNB_CONTRACT_ADDRESS || ""
         }
 
     }

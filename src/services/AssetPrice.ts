@@ -32,7 +32,8 @@ export class AssetPrice {
         let nativeContracts: Partial<Record<EVMNetwork, string>> = {
             [EVMNetwork.ethereum]: this.config.core.wethContractAddress,
             [EVMNetwork.polygon]: this.config.core.wpolContractAddress,
-            [EVMNetwork.cronos]: this.config.core.wcroContractAddress
+            [EVMNetwork.cronos]: this.config.core.wcroContractAddress,
+            [EVMNetwork.binanceSmartChain]: this.config.core.wbnbContractAdrress
         }
         return await Promise.all(
             Object.entries(nativeContracts).map(([chain, contract]) => {

@@ -5,6 +5,7 @@ interface Core {
     wethContractAddress: string
     wcroContractAddress: string
     wpolContractAddress: string
+    wbnbContractAdrress: string
 }
 
 interface MoralisConfig {
