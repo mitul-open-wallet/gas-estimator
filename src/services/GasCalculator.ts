@@ -41,12 +41,12 @@ export class GasCalculator {
             amountNormalized: gasInNormalUnits,
             amountUsd: gasCostInUSD,
             asset: {
-                name: price.tokenName.substring(8),
-                symbol: price.tokenSymbol.substring(1),
-                logo: price.tokenLogo,
-                decimals: price.tokenDecimals,
-                usdPrice: price.usdPrice,
-                usdPriceFormatted: price.usdPriceFormatted
+                name: price && price.tokenName ? price.tokenName.substring(8) : "",
+                symbol: price && price.tokenSymbol ? price.tokenSymbol.substring(1) : "",
+                logo: price && price.tokenLogo ? price.tokenLogo : "",
+                decimals: price && price.tokenDecimals ? price.tokenDecimals : "",
+                usdPrice: price && price.usdPrice ? price.usdPrice : 0,
+                usdPriceFormatted: price && price.usdPrice ? price.usdPriceFormatted : ""
             },
             calculatedAt: date
         }
