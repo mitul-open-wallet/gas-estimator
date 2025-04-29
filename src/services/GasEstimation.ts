@@ -12,7 +12,6 @@ export class GasEstimation {
 
     async fetchGasPrice(): Promise<GasByChain> {
         const url = `${this.config.lifi.baseUrl}gas/prices`;
-        console.log(url);
        const response = await fetch(url, {
         headers: {
             'accept': 'application/json',

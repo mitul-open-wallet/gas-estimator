@@ -16,6 +16,5 @@ app.listen(port, () => {
 
 app.get('/computeAirdrop', async (req: Request, res: Response) => {
   const gasEstimation = await gasCalculator.compute()
-  console.log(gasEstimation);
   res.status(200).send(gasEstimation);
 });
