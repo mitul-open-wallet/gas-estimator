@@ -16,7 +16,7 @@ export class GasCalculator {
     constructor() {
         this.assetPrice = new AssetPrice();
         this.gasEstimation = new GasEstimation();
-        this.defaultGasByChain = require(`./default_gas_price.json`)
+        this.defaultGasByChain = require('./default-data/default_gas_price.json')
     }
 
     private assetPriceForSimilarAssets(date: Date, price: Price): NativeAssetPrice[] {
