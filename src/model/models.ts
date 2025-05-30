@@ -53,7 +53,6 @@ export interface GasSpeedTier {
     standard: number,
     fast: number,
     fastest: number
-    lastUpdated: string
 }
 
 export interface GasByChain {

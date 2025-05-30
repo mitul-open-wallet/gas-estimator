@@ -11,12 +11,10 @@ import { GasAsset, GasItem } from "../model/models";
 export class GasCalculator {
     assetPrice: AssetPrice
     gasEstimation: GasEstimation
-    defaultGasByChain: GasByChain
 
     constructor() {
         this.assetPrice = new AssetPrice();
         this.gasEstimation = new GasEstimation();
-        this.defaultGasByChain = require('./default-data/default_gas_price.json')
     }
 
     private assetPriceForSimilarAssets(date: Date, price: Price): NativeAssetPrice[] {
@@ -55,11 +53,7 @@ export class GasCalculator {
     }
 
     async fetchGasByChain(): Promise<GasByChain> {
-        try {
-            return await this.gasEstimation.fetchGasPrice()
-        } catch (error) {
-            return this.defaultGasByChain
-        }
+        return await this.gasEstimation.fetchGasPrice()
     }
 
     async compute(): Promise<Record<string, GasItem[]>> {
@@ -83,7 +77,11 @@ export class GasCalculator {
                 let gasSpeedTier: GasSpeedTier
                 if (gasByChain[chainId] === undefined) {
                     console.log(`could not find gas speed tier for chain: ${chainId}`)
-                    gasSpeedTier = this.defaultGasByChain[chainId]
+                    gasSpeedTier = {
+                        "standard": 110000000,
+                        "fast": 110000000,
+                        "fastest": 120000000
+                    }
                 } else {
                     gasSpeedTier = gasByChain[chainId]
                 }
