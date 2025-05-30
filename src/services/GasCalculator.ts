@@ -1,7 +1,7 @@
 import { it } from "node:test";
 import { AssetPrice } from "./AssetPrice";
 import { GasEstimation } from "./GasEstimation";
-import { EVMNetwork, NativeAssetPrice, TransactionType } from "../model/models";
+import { EVMNetwork, GasByChain, NativeAssetPrice, TransactionType } from "../model/models";
 import { mapTransactionTypeToGasUnits } from "../model/models";
 import { GasSpeedTier } from "../model/models";
 import { mapEVMNetworkToChainId } from "../model/models";
@@ -11,10 +11,12 @@ import { GasAsset, GasItem } from "../model/models";
 export class GasCalculator {
     assetPrice: AssetPrice
     gasEstimation: GasEstimation
+    defaultGasByChain: GasByChain
 
     constructor() {
         this.assetPrice = new AssetPrice();
         this.gasEstimation = new GasEstimation();
+        this.defaultGasByChain = require(`./default_gas_price.json`)
     }
 
     private assetPriceForSimilarAssets(date: Date, price: Price): NativeAssetPrice[] {
@@ -52,8 +54,16 @@ export class GasCalculator {
         }
     }
 
+    async fetchGasByChain(): Promise<GasByChain> {
+        try {
+            return await this.gasEstimation.fetchGasPrice()
+        } catch (error) {
+            return this.defaultGasByChain
+        }
+    }
+
     async compute(): Promise<Record<string, GasItem[]>> {
-        const gasByChain = await this.gasEstimation.fetchGasPrice()
+        const gasByChain = await this.fetchGasByChain()
         const nativeAssetsPrice = await this.assetPrice.fetchNativeAssetPrice()
 
         const ethPrice = nativeAssetsPrice.filter(item => {
@@ -69,7 +79,16 @@ export class GasCalculator {
 
         nativeAssetsPrice.forEach(item => {
             const gasItems = Object.entries(TransactionType).map(type => {
-                return this.calculateGasWrtTxType(type[1], item.price, gasByChain[item.chainId!], item.timestamp)
+                const chainId = item.chainId!
+                let gasSpeedTier: GasSpeedTier
+                if (gasByChain[chainId] === undefined) {
+                    console.log(`could not find gas speed tier for chain: ${chainId}`)
+                    gasSpeedTier = this.defaultGasByChain[chainId]
+                } else {
+                    gasSpeedTier = gasByChain[chainId]
+                }
+
+                return this.calculateGasWrtTxType(type[1], item.price, gasSpeedTier, item.timestamp)
             })
             gasByTransferType[item.chainId!] = gasItems
         })
