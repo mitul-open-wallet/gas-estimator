@@ -1,12 +1,12 @@
 import { it } from "node:test";
 import { AssetPrice } from "./AssetPrice";
-import { GasEstimation } from "./GasEstimation";
 import { EVMNetwork, GasByChain, NativeAssetPrice, TransactionType } from "../model/models";
 import { mapTransactionTypeToGasUnits } from "../model/models";
 import { GasSpeedTier } from "../model/models";
 import { mapEVMNetworkToChainId } from "../model/models";
 import { Price } from "../model/models";
 import { GasAsset, GasItem } from "../model/models";
+import { GasEstimation } from "./GasEstimation";
 
 export class GasCalculator {
     assetPrice: AssetPrice
@@ -53,7 +53,11 @@ export class GasCalculator {
     }
 
     async fetchGasByChain(): Promise<GasByChain> {
-        return await this.gasEstimation.fetchGasPrice()
+        try {
+            return await this.gasEstimation.fetchGasPrice()
+        } catch (error) {
+            throw error
+        }
     }
 
     async compute(): Promise<Record<string, GasItem[]>> {

@@ -1,285 +1,291 @@
 {
   "1": {
-    "standard": 4314068000,
-    "fast": 5000000000,
-    "fastest": 6018902413,
-    "lastUpdated": 1748599620
+    "standard": 922096243,
+    "fast": 1143618316,
+    "fastest": 2191984787,
+    "lastUpdated": 1751014860
   },
   "10": {
-    "standard": 1005008,
-    "fast": 1006016,
-    "fastest": 1175429,
-    "lastUpdated": 1748599620
+    "standard": 1008425,
+    "fast": 1016538,
+    "fastest": 1159668,
+    "lastUpdated": 1751014860
   },
   "25": {
-    "standard": 3787500000000,
-    "fast": 4750000000000,
-    "fastest": 5681250000000,
-    "lastUpdated": 1748599620
+    "standard": 378750000000,
+    "fast": 568125000000,
+    "fastest": 5355000000000,
+    "lastUpdated": 1751014860
   },
   "30": {
     "standard": 28000000,
-    "fast": 60000000,
-    "fastest": 92000000,
-    "lastUpdated": 1748599620
+    "fast": 32000000,
+    "fastest": 36000000,
+    "lastUpdated": 1751014860
   },
   "50": {
-    "standard": 19800000002,
-    "fast": 23760000002,
-    "fastest": 29700000003,
-    "lastUpdated": 1748599620
+    "standard": 15000000000,
+    "fast": 18000000000,
+    "fastest": 22500000000,
+    "lastUpdated": 1751014860
   },
   "56": {
     "standard": 110000000,
     "fast": 110000000,
-    "fastest": 120000000,
-    "lastUpdated": 1748599620
+    "fastest": 110000000,
+    "lastUpdated": 1751014860
   },
   "100": {
-    "standard": 820000000,
-    "fast": 1730000000,
-    "fastest": 1730000000,
-    "lastUpdated": 1748599620
+    "standard": 1060000000,
+    "fast": 1950000000,
+    "fastest": 1950000000,
+    "lastUpdated": 1751014860
   },
   "122": {
     "standard": 20000000000,
     "fast": 20000000000,
-    "fastest": 28000000000,
-    "lastUpdated": 1748599620
+    "fastest": 30800000000,
+    "lastUpdated": 1751014860
   },
   "130": {
-    "standard": 1001700,
-    "fast": 1001800,
-    "fastest": 1001900,
-    "lastUpdated": 1748599620
+    "standard": 1001300,
+    "fast": 1013200,
+    "fastest": 1025100,
+    "lastUpdated": 1751014860
   },
   "137": {
-    "standard": 55046330043,
-    "fast": 63221380973,
-    "fastest": 76985354912,
-    "lastUpdated": 1748599620
+    "standard": 30000000030,
+    "fast": 30000000039,
+    "fastest": 50000153886,
+    "lastUpdated": 1751014860
   },
   "146": {
-    "standard": 55010000000,
-    "fast": 56650000000,
-    "fastest": 58290000000,
-    "lastUpdated": 1748599620
+    "standard": 66000000000,
+    "fast": 67500000000,
+    "fastest": 69000000000,
+    "lastUpdated": 1751014860
+  },
+  "204": {
+    "standard": 1000000,
+    "fast": 1200000,
+    "fastest": 1500000,
+    "lastUpdated": 1751014860
   },
   "232": {
-    "standard": 2772680823,
-    "fast": 3327216988,
-    "fastest": 4159021235,
-    "lastUpdated": 1748599620
+    "standard": 2771362054,
+    "fast": 3325634465,
+    "fastest": 4157043081,
+    "lastUpdated": 1751014860
   },
   "250": {
-    "standard": 1105470386,
-    "fast": 1108210229,
-    "fastest": 2000000000,
-    "lastUpdated": 1748599620
-  },
-  "252": {
-    "standard": 47207106,
-    "fast": 56648527,
-    "fastest": 70810659,
-    "lastUpdated": 1748599620
+    "standard": 1035451431,
+    "fast": 1041176366,
+    "fastest": 100000000000,
+    "lastUpdated": 1751014860
   },
   "288": {
     "standard": 1000252,
     "fast": 1200302,
     "fastest": 1500378,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "324": {
     "standard": 47000000,
     "fast": 48000000,
     "fastest": 49000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "480": {
-    "standard": 1000394,
-    "fast": 1200473,
-    "fastest": 1500591,
-    "lastUpdated": 1748599620
+    "standard": 1001667,
+    "fast": 1202000,
+    "fastest": 1502501,
+    "lastUpdated": 1751014860
   },
   "999": {
-    "standard": 2460000000,
-    "fast": 4120000000,
-    "fastest": 5780000000,
-    "lastUpdated": 1748599620
+    "standard": 300000000,
+    "fast": 330000000,
+    "fastest": 360000000,
+    "lastUpdated": 1751014860
   },
   "1088": {
-    "standard": 2900000000,
-    "fast": 3000000000,
-    "fastest": 3100000000,
-    "lastUpdated": 1748599620
+    "standard": 4000000000,
+    "fast": 4100000000,
+    "fastest": 4200000000,
+    "lastUpdated": 1751014860
   },
   "1101": {
     "standard": 10000000,
     "fast": 12000000,
     "fastest": 15000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "1135": {
-    "standard": 1001015,
-    "fast": 1201218,
-    "fastest": 1501523,
-    "lastUpdated": 1748599620
+    "standard": 1010303,
+    "fast": 1212364,
+    "fastest": 1515455,
+    "lastUpdated": 1751014860
   },
   "1284": {
     "standard": 31250000000,
     "fast": 37500000000,
     "fastest": 46875000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "1285": {
     "standard": 3300000000,
     "fast": 3300000000,
-    "fastest": 66000000000,
-    "lastUpdated": 1748599620
+    "fastest": 8300000000,
+    "lastUpdated": 1751014860
   },
   "1329": {
-    "standard": 1141992501,
-    "fast": 1370391001,
-    "fastest": 1712988752,
-    "lastUpdated": 1748599620
+    "standard": 1100000000,
+    "fast": 1320000000,
+    "fastest": 1650000000,
+    "lastUpdated": 1751014860
   },
   "1625": {
     "standard": 1800000000000,
     "fast": 2160000000000,
     "fastest": 2700000000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "1868": {
-    "standard": 2010000,
-    "fast": 2020000,
-    "fastest": 2030000,
-    "lastUpdated": 1748599620
+    "standard": 2020000,
+    "fast": 2030000,
+    "fastest": 2040000,
+    "lastUpdated": 1751014860
   },
   "1923": {
     "standard": 1200000,
     "fast": 1300000,
     "fastest": 1400000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "2741": {
     "standard": 45250000,
     "fast": 54300000,
     "fastest": 67875000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "5000": {
     "standard": 20000000,
     "fast": 20000000,
     "fastest": 20000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "8217": {
     "standard": 27500000000,
     "fast": 27500000000,
     "fastest": 27500000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "8453": {
-    "standard": 7136501,
-    "fast": 8263730,
-    "fastest": 9654487,
-    "lastUpdated": 1748599620
+    "standard": 4766899,
+    "fast": 5192212,
+    "fastest": 6903960,
+    "lastUpdated": 1751014860
   },
   "13371": {
     "standard": 11000000049,
     "fast": 13200000059,
     "fastest": 16500000074,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "33139": {
     "standard": 27000000000,
     "fast": 28000000000,
     "fastest": 29000000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "34443": {
     "standard": 1200000,
     "fast": 1300000,
     "fastest": 1400000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "42161": {
     "standard": 10000000,
     "fast": 10000000,
     "fastest": 10000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "42220": {
-    "standard": 8483511288,
-    "fast": 8483511288,
-    "fastest": 27511102836,
-    "lastUpdated": 1748599620
+    "standard": 25020000000,
+    "fast": 25030000000,
+    "fastest": 25040000000,
+    "lastUpdated": 1751014860
+  },
+  "42793": {
+    "standard": 1000000000,
+    "fast": 1200000000,
+    "fastest": 1500000000,
+    "lastUpdated": 1751014860
   },
   "43114": {
-    "standard": 235842722,
-    "fast": 1300000000,
-    "fastest": 41188223294,
-    "lastUpdated": 1748599620
+    "standard": 619846345,
+    "fast": 704095390,
+    "fastest": 1018585642,
+    "lastUpdated": 1751014860
   },
   "55244": {
     "standard": 200000000,
     "fast": 240000000,
     "fastest": 300000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "57073": {
-    "standard": 1200000,
-    "fast": 1300000,
-    "fastest": 1400000,
-    "lastUpdated": 1748599620
+    "standard": 78460,
+    "fast": 163000,
+    "fastest": 247540,
+    "lastUpdated": 1751014860
   },
   "59144": {
     "standard": 91000000,
     "fast": 92000000,
     "fastest": 93000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "60808": {
-    "standard": 1400000,
-    "fast": 1500000,
-    "fastest": 1600000,
-    "lastUpdated": 1748599620
+    "standard": 1200000,
+    "fast": 1300000,
+    "fastest": 1400000,
+    "lastUpdated": 1751014860
   },
   "80094": {
-    "standard": 70,
-    "fast": 84,
-    "fastest": 105,
-    "lastUpdated": 1748599620
+    "standard": 169,
+    "fast": 203,
+    "fastest": 254,
+    "lastUpdated": 1751014860
   },
   "81457": {
-    "standard": 1011147,
-    "fast": 1021270,
-    "fastest": 1024055,
-    "lastUpdated": 1748599620
+    "standard": 129483,
+    "fast": 135252,
+    "fastest": 136845,
+    "lastUpdated": 1751014860
   },
   "167000": {
     "standard": 100000100,
     "fast": 100000200,
     "fastest": 100000300,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "534352": {
     "standard": 30000000,
     "fast": 40000000,
     "fastest": 50000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "21000000": {
-    "standard": 600000,
-    "fast": 610000,
-    "fastest": 620000,
-    "lastUpdated": 1748599620
+    "standard": 610000,
+    "fast": 620000,
+    "fastest": 630000,
+    "lastUpdated": 1751014860
   },
   "1313161554": {
     "standard": 70000000,
     "fast": 70000000,
     "fastest": 70000000,
-    "lastUpdated": 1748599620
+    "lastUpdated": 1751014860
   },
   "1151111081099710": {
     "standard": 1,
@@ -288,15 +294,15 @@
     "lastUpdated": 0
   },
   "20000000000001": {
-    "standard": 2,
-    "fast": 3,
-    "fastest": 4,
-    "lastUpdated": 1748599621
+    "standard": 3,
+    "fast": 4.5,
+    "fastest": 6,
+    "lastUpdated": 1751014861
   },
   "9270000000000000": {
-    "standard": 740,
-    "fast": 740,
-    "fastest": 740,
-    "lastUpdated": 1748599620
+    "standard": 742,
+    "fast": 742,
+    "fastest": 742,
+    "lastUpdated": 1751014860
   }
 }
