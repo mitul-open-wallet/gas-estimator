@@ -1,12 +1,13 @@
 import { it } from "node:test";
 import { AssetPrice } from "./AssetPrice";
-import { EVMNetwork, GasByChain, NativeAssetPrice, TransactionType } from "../model/models";
+import { GasEstimation } from "./GasEstimation";
+import { EVMNetwork, NativeAssetPrice, TransactionType } from "../model/models";
 import { mapTransactionTypeToGasUnits } from "../model/models";
 import { GasSpeedTier } from "../model/models";
 import { mapEVMNetworkToChainId } from "../model/models";
 import { Price } from "../model/models";
 import { GasAsset, GasItem } from "../model/models";
-import { GasEstimation } from "./GasEstimation";
+import { appConfig } from "../config";
 
 export class GasCalculator {
     assetPrice: AssetPrice
@@ -28,12 +29,13 @@ export class GasCalculator {
     }
 
     private calculateGasWrtTxType(type: TransactionType, price: Price, gasSpeed: GasSpeedTier, date: Date): GasItem {
-        const safetyMultiplier = 1.2;
+        const safetyMultiplier = appConfig.safetyMultiplier;
         const gasLimitByTxType = mapTransactionTypeToGasUnits(type);
         const rawGasPrice = gasLimitByTxType * gasSpeed.fastest
         const gasInWei = rawGasPrice * safetyMultiplier;
         const gasInNormalUnits = gasInWei * Math.pow(10, -price.tokenDecimals);
         const gasCostInUSD = gasInNormalUnits * price.usdPrice;
+        console.log(`raw: ${rawGasPrice} -- with multiplier: ${gasInWei} usd cost: ${gasCostInUSD}`)
 
         return {
             type: type,
@@ -52,16 +54,8 @@ export class GasCalculator {
         }
     }
 
-    async fetchGasByChain(): Promise<GasByChain> {
-        try {
-            return await this.gasEstimation.fetchGasPrice()
-        } catch (error) {
-            throw error
-        }
-    }
-
     async compute(): Promise<Record<string, GasItem[]>> {
-        const gasByChain = await this.fetchGasByChain()
+        const gasByChain = await this.gasEstimation.fetchGasPrice()
         const nativeAssetsPrice = await this.assetPrice.fetchNativeAssetPrice()
 
         const ethPrice = nativeAssetsPrice.filter(item => {
@@ -77,20 +71,7 @@ export class GasCalculator {
 
         nativeAssetsPrice.forEach(item => {
             const gasItems = Object.entries(TransactionType).map(type => {
-                const chainId = item.chainId!
-                let gasSpeedTier: GasSpeedTier
-                if (gasByChain[chainId] === undefined) {
-                    console.log(`could not find gas speed tier for chain: ${chainId}`)
-                    gasSpeedTier = {
-                        "standard": 110000000,
-                        "fast": 110000000,
-                        "fastest": 120000000
-                    }
-                } else {
-                    gasSpeedTier = gasByChain[chainId]
-                }
-
-                return this.calculateGasWrtTxType(type[1], item.price, gasSpeedTier, item.timestamp)
+                return this.calculateGasWrtTxType(type[1], item.price, gasByChain[item.chainId!], item.timestamp)
             })
             gasByTransferType[item.chainId!] = gasItems
         })
