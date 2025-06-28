@@ -5,6 +5,7 @@ dotenv.config()
 
 function getAppConfig(): AppConfig {
     return {
+        safetyMultiplier: parseFloat(process.env.SAFETY_MULTIPLIER || "10"),
         moralis: {
             baseUrl: process.env.MORALIS_BASE_URL || "",
             apiKey: process.env.MORALIS_API_KEY || ""
@@ -20,7 +21,6 @@ function getAppConfig(): AppConfig {
             wcroContractAddress: process.env.WCRO_CONTRACT_ADDRESS || "",
             wpolContractAddress: process.env.WPOL_CONTRACT_ADDRESS || ""
         }
-
     }
 }
 

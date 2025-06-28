@@ -8,7 +8,7 @@ interface Core {
 }
 
 interface MoralisConfig {
-    baseUrl: string,
+    baseUrl: string
     apiKey: string
 }
 
@@ -18,8 +18,9 @@ interface LiFiConfig {
 }
 
 export interface AppConfig {
-    moralis: MoralisConfig,
-    lifi: LiFiConfig,
+    safetyMultiplier: number
+    moralis: MoralisConfig
+    lifi: LiFiConfig
     environment: Environment
     core: Core
 }

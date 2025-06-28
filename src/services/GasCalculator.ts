@@ -7,6 +7,7 @@ import { GasSpeedTier } from "../model/models";
 import { mapEVMNetworkToChainId } from "../model/models";
 import { Price } from "../model/models";
 import { GasAsset, GasItem } from "../model/models";
+import { appConfig } from "../config";
 
 export class GasCalculator {
     assetPrice: AssetPrice
@@ -28,12 +29,13 @@ export class GasCalculator {
     }
 
     private calculateGasWrtTxType(type: TransactionType, price: Price, gasSpeed: GasSpeedTier, date: Date): GasItem {
-        const safetyMultiplier = 1.2;
+        const safetyMultiplier = appConfig.safetyMultiplier;
         const gasLimitByTxType = mapTransactionTypeToGasUnits(type);
         const rawGasPrice = gasLimitByTxType * gasSpeed.fastest
         const gasInWei = rawGasPrice * safetyMultiplier;
         const gasInNormalUnits = gasInWei * Math.pow(10, -price.tokenDecimals);
         const gasCostInUSD = gasInNormalUnits * price.usdPrice;
+        console.log(`raw: ${rawGasPrice} -- with multiplier: ${gasInWei} usd cost: ${gasCostInUSD}`)
 
         return {
             type: type,
