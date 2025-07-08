@@ -5,7 +5,7 @@ dotenv.config()
 
 function getAppConfig(): AppConfig {
     return {
-        safetyMultiplier: parseFloat(process.env.SAFETY_MULTIPLIER || "10"),
+        safetyMultiplier: parseFloat(process.env.SAFETY_MULTIPLIER || "1"),
         moralis: {
             baseUrl: process.env.MORALIS_BASE_URL || "",
             apiKey: process.env.MORALIS_API_KEY || ""
